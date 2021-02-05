@@ -38,8 +38,12 @@ public class Punto implements Cloneable{
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone(); 
+    public Punto clone()  {
+        try{
+        return (Punto) super.clone(); 
+        } catch(CloneNotSupportedException e){
+            return null;
+        }
     }
 
   

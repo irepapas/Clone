@@ -25,8 +25,8 @@ public class App {
         System.out.println("----Rettangoli clonati-----");
         System.out.println("r1:" + r1);
         System.out.println("r2:" + r2);
-        p2.move(7, 6);
-        r1.setOrigine(p2);
+        
+        r1.move(7, 6);
         System.out.println("----Rettangoli clonati profonda-----");
         System.out.println("r1:" + r1);
         System.out.println("r2:" + r2);

@@ -33,9 +33,12 @@ public class Rectangle implements Cloneable{
         return (Punto) origine.clone();
     }
 
-    public void setOrigine(Punto origine) {
-        this.origine = origine;
+    public void move(int x, int y) {
+        origine.move(x, y);
     }
+    
+   
+
 
     @Override
     public String toString() {
@@ -50,10 +53,10 @@ public class Rectangle implements Cloneable{
      * @throws CloneNotSupportedException
      */
     @Override
-    protected Object clone() throws CloneNotSupportedException  {
+    public Rectangle clone() throws CloneNotSupportedException  {
         try{
             Rectangle r = (Rectangle)super.clone();
-            r.origine = (Punto)origine.clone();
+            r.origine = origine.clone();
             return r;
             } catch(CloneNotSupportedException e){
                 return null;
